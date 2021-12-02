@@ -1,14 +1,12 @@
-import React from 'react';
-import './styles.css';
+import Forms from "../../components/Forms";
+import * as S from "./styles";
 
 const SingIn = () => {
-    return (
-        <div>
-            <h1>SingIn Page</h1>
-            <p>asdasdasdadadadsad</p>
-        </div>
-    )
-}
+  return (
+    <S.Container>
+      <Forms />
+    </S.Container>
+  );
+};
 
-export default SingIn
-
+export default SingIn;

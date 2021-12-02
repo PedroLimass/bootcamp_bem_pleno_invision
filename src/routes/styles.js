@@ -26,7 +26,7 @@ export const FormSide = styled.div`
     justify-content: flex-start;
     font: var(--invision-title-font);
     color: var(--secondary-initial-text);
-    margin-left: 60%;
+    margin-left: 70%;
     margin-top: 5%;
   }
 `;
