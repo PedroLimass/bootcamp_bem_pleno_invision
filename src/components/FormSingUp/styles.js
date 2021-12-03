@@ -10,6 +10,18 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
 
+  @media (max-width: ${sizes.mobile}) {
+    margin-top: 15%;
+  }
+
+  @media (min-width: ${sizes.ipad}) {
+    margin-top: 15%;
+  }
+
+  @media (min-width: ${sizes.desktop}) {
+    margin-top: 0;
+  }
+
   form {
     display: flex;
     flex-direction: column;
@@ -19,22 +31,21 @@ export const Container = styled.div`
     min-height: 257px;
 
     @media (max-width: ${sizes.mobile}) {
-      padding: 0 2.2rem
+      padding: 0 2.2rem;
     }
   }
 
   h1 {
     font: normal normal normal 30px/38px Mulish;
     color: var(--color-Invision-secondary);
-    align-self: center;    
+    align-self: center;
 
     @media (min-width: ${sizes.ipad}) {
-      margin-top: 25px;
-      margin-bottom: 22px;
+      margin-bottom: 10px;
     }
 
     @media (min-width: ${sizes.desktop}) {
-      margin-bottom: 87px;
+      margin-bottom: 50px;
     }
 
     @media (max-width: ${sizes.mobile}) {
@@ -60,7 +71,11 @@ export const Container = styled.div`
   }
 
   input:first-of-type {
-    margin-bottom: 18px;
+    margin-bottom: 9px;
+
+    @media (min-width: ${sizes.desktop}) {
+      margin-bottom: 18px;
+    }
   }
 
   input {
@@ -72,14 +87,32 @@ export const Container = styled.div`
     border-bottom: 1px solid var(--color-Invision-secondary);
   }
 
-  p {
-    margin-top: 1.5rem;
+  p {    
     font: normal normal normal 16px/20px Mulish;
   }
 
-  #createLink {
+  
+
+  .haveLogin{
+    margin-top: 15px;
+  }
+
+  #redirectedLink {
     text-decoration: underline;
     color: var(--color-Invision-primary);
+  }
+
+
+  .termsAndCondicions {
+    margin-top: 10px;
+    text-align: center;
+    font: normal normal normal 14px/20px Mulish;
+    color: var(--color-Invision-secondary);
+
+    span {
+      color: var(--color-Invision-primary);
+      text-decoration: underline;
+    }
   }
 
   .formError {
@@ -89,13 +122,6 @@ export const Container = styled.div`
     width: 100%;
     color: red;
   }
-
-  /* @media (min-width: ${sizes.notebook}) {
-      h1{
-        margin-top: 25px;
-        margin-bottom: 22px;        
-      }    
-    } */
 `;
 
 export const SubContainer = styled.div`
@@ -104,10 +130,13 @@ export const SubContainer = styled.div`
     ${props => {
       if (props.borderError)
         return `         
-        border-bottom: 1px solid red;
-        
+        border-bottom: 1px solid red;        
         `;
     }}
+  }
+
+  #marginSubmit{
+    margin-bottom: 15px;
   }
 `;
 
@@ -116,7 +145,7 @@ export const OrModel = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 25px 0;
+  margin: 15px 0;
   font: normal normal normal 14px/18px Mulish;
   hr {
     width: 50%;

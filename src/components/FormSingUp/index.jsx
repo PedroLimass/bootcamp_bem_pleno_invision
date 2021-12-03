@@ -8,14 +8,15 @@ import Button from '../Button';
 
 import * as S from './styles';
 
-const Forms = () => {
+const FormSingUp = () => {
   return (
     <S.Container>
-      <h1>Welcome to Invision</h1>
+      <h1>Getting Started</h1>
       <Formik
         initialValues={{
-          email: '',
-          password: '',
+          fullName: 'Carolina Galvão dos Santos Zaglia',
+          email: 'carolinagalvaosantos@gmail.com',
+          password: '****************',
         }}
         onSubmit={(values, { setSubmitting }) => {
           setTimeout(() => {
@@ -24,23 +25,42 @@ const Forms = () => {
           }, 500);
         }}
         validationSchema={Yup.object().shape({
+          fullName: Yup.string().required('*Este campo não pode ser vazio'),
           email: Yup.string()
             .email('o e-mail está incorreto')
             .required('*Este campo não pode ser vazio'),
-          password: Yup.string().required('*Este campo não pode ser vazio'),
+          password: Yup.string()
+            .min(6, 'Too Short!')
+            .required('*Este campo não pode ser vazio'),
         })}
       >
         {props => {
           const {
             values,
             touched,
-            errors,            
+            errors,
             handleChange,
             handleBlur,
-            handleSubmit,            
+            handleSubmit,
           } = props;
           return (
             <form onSubmit={handleSubmit}>
+              <S.SubContainer borderError={touched.fullName && errors.fullName}>
+                <label>
+                  Full Name
+                  <input
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    value={values.fullName}
+                    type="text"
+                    name="fullName"
+                    placeholder="Full Name"
+                  />
+                </label>
+              </S.SubContainer>
+              {touched.fullName && errors.fullName && (
+                <span className="formError">{errors.fullName}</span>
+              )}
               <S.SubContainer borderError={touched.email && errors.email}>
                 <label>
                   Users name or Email
@@ -50,7 +70,7 @@ const Forms = () => {
                     value={values.email}
                     type="text"
                     name="email"
-                    // placeholder="Email"
+                    placeholder="Email"
                   />
                 </label>
               </S.SubContainer>
@@ -59,15 +79,16 @@ const Forms = () => {
               )}
               <S.SubContainer borderError={touched.password && errors.password}>
                 <label>
-                  Password
+                  Create Password
                   <input
                     onChange={handleChange}
                     onBlur={handleBlur}
-                    value={values.password}                    
+                    value={values.password}
                     borderError={touched.password && errors.password}
                     type="password"
                     name="password"
-                    // placeholder="Password"
+                    placeholder="Password"
+                    id="marginSubmit"
                   />
                 </label>
               </S.SubContainer>
@@ -77,9 +98,7 @@ const Forms = () => {
                   {errors.password}
                 </span>
               )}
-              <a href="#">Forgot password?</a>
-
-              <Button typeBtn="submit" valueText="Sign in" />
+              <Button typeBtn="submit" valueText="Sign up" />
             </form>
           );
         }}
@@ -93,16 +112,22 @@ const Forms = () => {
         typeBtn="submit"
         valueText="Sign in with Google"
         setStyles="primary"
-        src={GoogleLogo}
+        src={GoogleLogo}        
       />
-      <p>
-        New <strong>Invision?</strong>
-        <Link to="/SignUp" id="createLink">
-          Create Account
+
+      <p className="termsAndCondicions">
+        By signing up, you agree to <strong>Invision</strong> <br />{' '}
+        <span>Terms of Conditions</span> and <span>Privacy Policy</span>
+      </p>
+
+      <p className='haveLogin'>
+        Already on <strong>Invision? </strong>
+        <Link to="/" id="redirectedLink">
+          Log in
         </Link>
       </p>
     </S.Container>
   );
 };
 
-export default Forms;
+export default FormSingUp;

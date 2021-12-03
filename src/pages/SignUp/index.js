@@ -1,14 +1,12 @@
-import React from 'react'
+import Forms from '../../components/FormSingUp';
+import * as S from './styles';
 
 const SignUp = () => {
-    return (
-        <div>
-            <h1>SignUp</h1>
-            <p>asdasdasdadadadsad</p>
-        </div>
-    )
-}
+  return (
+    <S.Container>
+      <Forms />
+    </S.Container>
+  );
+};
 
-export default SignUp
-
-
+export default SignUp;
