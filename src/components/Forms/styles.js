@@ -19,14 +19,14 @@ export const Container = styled.div`
     min-height: 257px;
 
     @media (max-width: ${sizes.mobile}) {
-      padding: 0 2.2rem
+      padding: 0 2.2rem;
     }
   }
 
   h1 {
-    font: normal normal normal 30px/38px Mulish;
+    font: var(--dafault-Invision-bigger);
     color: var(--color-Invision-secondary);
-    align-self: center;    
+    align-self: center;
 
     @media (min-width: ${sizes.ipad}) {
       margin-top: 25px;
@@ -47,14 +47,14 @@ export const Container = styled.div`
     text-decoration: none;
     color: var(--color-Invision-secondary);
     align-self: flex-end;
-    font: normal normal normal 14px/18px Mulish;
+    font: var(--dafault-Invision-smaller);
     cursor: pointer;
     margin-bottom: 30px;
   }
 
   label {
     width: 100%;
-    font: normal normal normal 14px/18px Mulish;
+    font: var(--dafault-Invision-smaller);
     color: var(--color-Invision-secondary);
     margin-bottom: 4px;
   }
@@ -68,18 +68,22 @@ export const Container = styled.div`
     height: 42px;
     padding-left: 20px;
     border-style: none;
-    font: normal normal normal 16px/20px Mulish;
+    font: var(--dafault-Invision-normal);
     border-bottom: 1px solid var(--color-Invision-secondary);
   }
 
-  p {
-    margin-top: 1.5rem;
-    font: normal normal normal 16px/20px Mulish;
-  }
-
   #createLink {
-    text-decoration: underline;
-    color: var(--color-Invision-primary);
+    align-self: center;
+    margin-top: 1.5rem;
+    font: var(--dafault-Invision-normal);
+
+    strong {
+      color: var(--color-Invision-primary);
+    }
+
+    span {
+      text-decoration: underline;
+    }
   }
 
   .formError {
@@ -89,13 +93,6 @@ export const Container = styled.div`
     width: 100%;
     color: red;
   }
-
-  /* @media (min-width: ${sizes.notebook}) {
-      h1{
-        margin-top: 25px;
-        margin-bottom: 22px;        
-      }    
-    } */
 `;
 
 export const SubContainer = styled.div`
@@ -117,7 +114,7 @@ export const OrModel = styled.div`
   justify-content: center;
   align-items: center;
   margin: 25px 0;
-  font: normal normal normal 14px/18px Mulish;
+  font: var(--dafault-Invision-smaller);
   hr {
     width: 50%;
     background: var(--color-Invision-secondary);

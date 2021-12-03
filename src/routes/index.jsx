@@ -19,7 +19,7 @@ const routes = () => {
         <BrowserRouter>
           <Switch>
             <Route path="/" exact component={SingIn} />
-            <Route path="/SignUp" component={SignUp} />
+            <Route path="/signup" component={SignUp} />            
           </Switch>
           <GlobalStyle/>
         </BrowserRouter>

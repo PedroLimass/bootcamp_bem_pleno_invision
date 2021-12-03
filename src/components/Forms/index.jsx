@@ -95,12 +95,10 @@ const Forms = () => {
         setStyles="primary"
         src={GoogleLogo}
       />
-      <p>
+      <Link to="/signup" id="createLink">
         Novo no <strong>Invision? </strong>
-        <Link to="/SignUp" id="createLink">
-          Crie uma conta
-        </Link>
-      </p>
+        <span>Crie uma conta</span>
+      </Link>
     </S.Container>
   );
 };

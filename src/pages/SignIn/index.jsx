@@ -1,5 +1,5 @@
-import Forms from "../../components/Forms";
-import * as S from "./styles";
+import Forms from '../../components/Forms';
+import * as S from './styles';
 
 const SingIn = () => {
   return (

@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 
 import carousel_1 from '../../assets/Data.png';
 import carousel_2 from '../../assets/data1.svg';

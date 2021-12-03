@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
 * {
@@ -20,11 +20,23 @@ export default createGlobalStyle`
     --size-desktop: '1800px';
   
 
-    --default-font-weight: 500;
     --google-font-settings: normal normal normal 18px/22px Lato;
     --default-font-components: 16px 'Mulish';
     --default-font-text: 15px;
     --invision-title-font: normal normal 900 35px/48px Lato;
+
+
+    --dafault-Invision-smaller: normal normal normal 14px/18px Mulish;
+    --dafault-Invision-small: normal normal normal 14px/20px Mulish;
+    --dafault-Invision-semi-bold: normal normal normal 20px/25px Mulish;
+    --dafault-Invision-bold: normal normal bold 16px/20px Mulish;
+    --dafault-Invision-normal: normal normal normal 16px/20px Mulish;
+    --dafault-Invision-bigger: normal normal normal 30px/38px Mulish;
+        
+
+    
+    
+    
   }
 
 `;

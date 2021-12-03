@@ -15,14 +15,14 @@ export const Container = styled.div`
 
 export const CarroselSide = styled.div`
   display: flex;
-  justify-content: center;  
+  justify-content: center;
   align-items: center;
   flex: 1;
   background-color: var(--color-Invision-primary);
 
   @media (max-width: ${sizes.ipadPro}) {
-      display: none;
-    }
+    display: none;
+  }
 `;
 
 export const FormSide = styled.div`
@@ -37,21 +37,20 @@ export const FormSide = styled.div`
     color: var(--secondary-initial-text);
     right: 7%;
     top: 10%;
-    
+
     @media (min-width: ${sizes.notebook}) {
       right: 7%;
-      top: 5%;      
+      top: 5%;
     }
 
     @media (max-width: ${sizes.ipad}) {
       right: 5%;
-      top: 3%;      
+      top: 3%;
     }
 
     @media (max-width: ${sizes.mobile}) {
       right: 2%;
-      top: 2%;      
+      top: 2%;
     }
-    
   }
 `;

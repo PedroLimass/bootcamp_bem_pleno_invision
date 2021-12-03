@@ -6,9 +6,11 @@ export const Button = styled.button`
   border-radius: 100px;
   background-color: var(--color-Invision-secondary);
   color: var(--color-Invision-white);
-  font: normal normal bold 16px/20px Mulish;
+  font: var(--dafault-Invision-bold);
   border: none;
   text-align: center;
+
+  margin-top: ${props => props.mt};
 
   :hover {
     cursor: pointer;

@@ -36,7 +36,7 @@ export const Container = styled.div`
   }
 
   h1 {
-    font: normal normal normal 30px/38px Mulish;
+    font: var(--dafault-Invision-bigger);
     color: var(--color-Invision-secondary);
     align-self: center;
 
@@ -58,14 +58,14 @@ export const Container = styled.div`
     text-decoration: none;
     color: var(--color-Invision-secondary);
     align-self: flex-end;
-    font: normal normal normal 14px/18px Mulish;
+    font: var(--dafault-Invision-smaller);
     cursor: pointer;
     margin-bottom: 30px;
   }
 
   label {
     width: 100%;
-    font: normal normal normal 14px/18px Mulish;
+    font: var(--dafault-Invision-smaller);
     color: var(--color-Invision-secondary);
     margin-bottom: 4px;
   }
@@ -83,17 +83,14 @@ export const Container = styled.div`
     height: 42px;
     padding-left: 20px;
     border-style: none;
-    font: normal normal normal 16px/20px Mulish;
+    font: var(--dafault-Invision-normal);
     border-bottom: 1px solid var(--color-Invision-secondary);
   }
 
-  p {    
-    font: normal normal normal 16px/20px Mulish;
+  p {
+    font: var(--dafault-Invision-normal);
   }
-
-  
-
-  .haveLogin{
+  .haveLogin {
     margin-top: 15px;
   }
 
@@ -102,11 +99,10 @@ export const Container = styled.div`
     color: var(--color-Invision-primary);
   }
 
-
   .termsAndCondicions {
     margin-top: 10px;
     text-align: center;
-    font: normal normal normal 14px/20px Mulish;
+    font: var(--dafault-Invision-small);
     color: var(--color-Invision-secondary);
 
     span {
@@ -116,11 +112,25 @@ export const Container = styled.div`
   }
 
   .formError {
-    margin-top: -14px;
+    margin-top: -5px;
     margin-bottom: 14px;
     z-index: 1;
     width: 100%;
     color: red;
+  }
+
+  #haveLogin {
+    align-self: center;
+    margin-top: 1.5rem;
+    font: var(--dafault-Invision-normal);
+
+    strong {
+      color: var(--color-Invision-primary);
+    }
+
+    span {
+      text-decoration: underline;
+    }
   }
 `;
 
@@ -134,10 +144,6 @@ export const SubContainer = styled.div`
         `;
     }}
   }
-
-  #marginSubmit{
-    margin-bottom: 15px;
-  }
 `;
 
 export const OrModel = styled.div`
@@ -146,7 +152,7 @@ export const OrModel = styled.div`
   justify-content: center;
   align-items: center;
   margin: 15px 0;
-  font: normal normal normal 14px/18px Mulish;
+  font: var(--dafault-Invision-smaller);
   hr {
     width: 50%;
     background: var(--color-Invision-secondary);

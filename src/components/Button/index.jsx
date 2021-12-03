@@ -1,15 +1,13 @@
-import React from 'react'
-import * as S from './styles'
+import React from 'react';
+import * as S from './styles';
 
-const Button = ({valueText, typeBtn, setStyles, src}) => {
-    return (
-        <S.Button type={typeBtn} setStyles={setStyles}>
-            {src ? <img src={src} alt="Logo Google"/> : null}
-            {valueText}
-        </S.Button>
-            
-        
-    )
-}
+const Button = ({ valueText, typeBtn, setStyles, src, mt }) => {
+  return (
+    <S.Button type={typeBtn} setStyles={setStyles} mt={mt}>
+      {src ? <img src={src} alt="Logo Google" /> : null}
+      {valueText}
+    </S.Button>
+  );
+};
 
-export default Button
+export default Button;

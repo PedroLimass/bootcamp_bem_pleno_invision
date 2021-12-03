@@ -30,7 +30,7 @@ const FormSingUp = () => {
             .email('o e-mail está incorreto')
             .required('*Este campo não pode ser vazio'),
           password: Yup.string()
-            .min(6, 'Too Short!')
+            .min(6, 'A senha não pode ter menos de 6 caracteres')
             .required('*Este campo não pode ser vazio'),
         })}
       >
@@ -88,17 +88,13 @@ const FormSingUp = () => {
                     type="password"
                     name="password"
                     placeholder="Password"
-                    id="marginSubmit"
                   />
                 </label>
               </S.SubContainer>
-
               {touched.password && errors.password && (
-                <span className="formError" style={{ color: 'red' }}>
-                  {errors.password}
-                </span>
+                <span className="formError">{errors.password}</span>
               )}
-              <Button typeBtn="submit" valueText="Sign up" />
+              <Button typeBtn="submit" valueText="Sign up" mt="15px" />
             </form>
           );
         }}
@@ -112,7 +108,7 @@ const FormSingUp = () => {
         typeBtn="submit"
         valueText="Sign in with Google"
         setStyles="primary"
-        src={GoogleLogo}        
+        src={GoogleLogo}
       />
 
       <p className="termsAndCondicions">
@@ -120,12 +116,10 @@ const FormSingUp = () => {
         <span>Terms of Conditions</span> and <span>Privacy Policy</span>
       </p>
 
-      <p className='haveLogin'>
-        Already on <strong>Invision? </strong>
-        <Link to="/" id="redirectedLink">
-          Log in
-        </Link>
-      </p>
+      <Link to="/" id="haveLogin">
+        Já está no <strong>Invision? </strong>
+        <span>Entre</span>
+      </Link>
     </S.Container>
   );
 };
