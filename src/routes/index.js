@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import SingIn from "../pages/SignIn/index";
 import SignUp from "../pages/SignUp/index";
+import Carousel from "../components/Carousel";
 
 import * as S from "./styles";
 import GlobalStyle from '../styles/global';
@@ -11,7 +12,7 @@ const routes = () => {
   return (
     <S.Container>
       <S.CarroselSide>
-        <p>asdasd</p>
+        <Carousel/>
       </S.CarroselSide>
       <S.FormSide>
         <h1 className='titleFixed'>Invision</h1>

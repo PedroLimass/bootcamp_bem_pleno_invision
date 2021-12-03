@@ -34,10 +34,10 @@ const Forms = () => {
           const {
             values,
             touched,
-            errors,            
+            errors,
             handleChange,
             handleBlur,
-            handleSubmit,            
+            handleSubmit,
           } = props;
           return (
             <form onSubmit={handleSubmit}>
@@ -63,7 +63,7 @@ const Forms = () => {
                   <input
                     onChange={handleChange}
                     onBlur={handleBlur}
-                    value={values.password}                    
+                    value={values.password}
                     borderError={touched.password && errors.password}
                     type="password"
                     name="password"
@@ -96,9 +96,9 @@ const Forms = () => {
         src={GoogleLogo}
       />
       <p>
-        New <strong>Invision?</strong>
+        Novo no <strong>Invision? </strong>
         <Link to="/SignUp" id="createLink">
-          Create Account
+          Crie uma conta
         </Link>
       </p>
     </S.Container>
