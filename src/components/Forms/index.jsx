@@ -25,9 +25,9 @@ const Forms = () => {
         }}
         validationSchema={Yup.object().shape({
           email: Yup.string()
-            .email('o e-mail está incorreto')
+            .email('o e-mail está incorreto.')
             .required('*Este campo não pode ser vazio'),
-          password: Yup.string().required('*Este campo não pode ser vazio'),
+          password: Yup.string().required('*Este campo não pode ser vazio.'),
         })}
       >
         {props => {

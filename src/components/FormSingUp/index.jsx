@@ -27,11 +27,11 @@ const FormSingUp = () => {
         validationSchema={Yup.object().shape({
           fullName: Yup.string().required('*Este campo não pode ser vazio'),
           email: Yup.string()
-            .email('o e-mail está incorreto')
-            .required('*Este campo não pode ser vazio'),
+            .email('O e-mail está incorreto.')
+            .required('*Este campo não pode ser vazio.'),
           password: Yup.string()
-            .min(6, 'A senha não pode ter menos de 6 caracteres')
-            .required('*Este campo não pode ser vazio'),
+            .min(6, 'A senha não pode ter menos de 6 caracteres.')
+            .required('*Este campo não pode ser vazio.'),
         })}
       >
         {props => {
@@ -94,7 +94,7 @@ const FormSingUp = () => {
               {touched.password && errors.password && (
                 <span className="formError">{errors.password}</span>
               )}
-              <Button typeBtn="submit" valueText="Sign up" mt="15px" />
+              <Button typeBtn="submit" valueText="Sign up" mt="5px" />
             </form>
           );
         }}

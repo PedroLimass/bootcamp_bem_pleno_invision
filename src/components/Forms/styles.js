@@ -92,6 +92,8 @@ export const Container = styled.div`
     z-index: 1;
     width: 100%;
     color: red;
+    font: var(--dafault-Invision-smaller);
+    padding-left: 20px;
   }
 `;
 
